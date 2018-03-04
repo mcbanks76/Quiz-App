@@ -4,41 +4,34 @@
 	<meta charset="UTF-8">
 	<title>The 1980's TV Quiz</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name= "description" content="How Totally 80's Are You? Take our 1980's TV Quiz and Find Out.">
+	<meta name="description" content="How Totally 80's Are You? Take our 1980's TV Quiz and Find Out.">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 	<link href="main.css" rel="stylesheet" type="text/css">
 	<link href="float-grid.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="index.js"></script>
+	
 </head>
 <body>
 	<header role="banner" class="masthead">
 		<div>
-			<H1>The Totally! 1980's TV Quiz</H1>
+			<h1>The Totally! 1980's TV Quiz</h1>
 		</div>
 	</header>
-	<div id ="landingBox">
-		<button onclick = "//some function that runs this thing" "type="submit" value="Player 1 Start">Player 1</button>
-	</div>
-	<div class="question-status">
-			<p id="qNumberCorrect"></p>
+
+	<main role="main">
+		<div class="quizStart">
+        	<p class="quizStartText">So, you think you know your 80's television, do ya humanoid? Take this quiz and prove it.</p>
+        <button type="button" class="startButton">Player One</button>
+      </div>
+
+		<div class="scoreboard">
+			<p class="scoreboardtext">Question:<span class="js-question-number">1</span><span>/10</span></p>
+			<p class="scoreboardtext">Your Score:<span class="js-score-counter">0</span></p>
 		</div>
-	<div id ="form">
-		<form role="form" action="/Quiz" accept-charset="UTF-8" method="post" id="quiz-form">
-    		<fieldset class="fieldset">
-      			<legend id="question"></legend>
-     				<input type="radio" name="choiceA" value="A" id="choiceA"></label>
-      				<input type="radio" name="choiceB" value="B" id="choiceB"></label>
-      				<input type="radio" name="choiceC" value="C" id="choiceC"></label>
-      				<input type="radio" name="choiceD" value="D" id="choiceD"></label>
-    		</fieldset>
-  		</form>
-  	</div>
+
+		<div class="js-quiz-container quiz-container"><p></p></div>
+  	</main>
 </body>
 </html>
-// How to route/change views?
-// State and DOM?
-// Route = some type of string that we will 'set and get' (a function)
-	// one will take current state and change it (set)
-	// get path will take path and return current path
-// Store that route property somewhere ( in a quizobject type area - where data is placed)
-//
